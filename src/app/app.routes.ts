@@ -3,9 +3,9 @@ import { DayComponent } from './day/day.component';
 
 export const AppRoutes: Routes = [
   { path: '',
-     redirectTo: 'home',
+     redirectTo: '/',
      pathMatch: 'full'
  },
- { path: 'home', component: DayComponent},
+ { path: '', component: DayComponent},
  { path: '**', redirectTo: '/'}
 ];
