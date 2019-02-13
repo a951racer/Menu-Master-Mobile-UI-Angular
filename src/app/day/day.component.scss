@@ -1,5 +1,24 @@
 @import '../../appThemeVariables.scss';
 
+.day-page {
+  margin: 0px 8px 0px 8px;
+}
+
+.mat-expansion-panel {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mat-expansion-panel-expanded {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mat-accordion > .mat-expansion-panel-spacing:last-child {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .mat-expansion-panel-header-title {
   font-weight: bold;
   font-size: large;
@@ -38,9 +57,7 @@
 }
 
 /*
-.day-page {
-    padding-top: 80px;
-}
+
 
 .left-col {
     margin: 20px 10px 20px 0;

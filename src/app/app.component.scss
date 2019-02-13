@@ -4,8 +4,7 @@
     flex: 1 1 auto;
   }
 
-  .footer
-{
+.footer {
     //height: 33px;
     font-size: 75%;
     color: $primary-contrast;
@@ -17,6 +16,7 @@
 .toolbar {
     color: $primary-contrast;
     background-color: $primary;
+    z-index: 10;
 }
 
 .selected {
@@ -27,4 +27,17 @@
 .not-selected {
     color: $primary-contrast;
     background-color: $primary;
+}
+
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sticky-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
