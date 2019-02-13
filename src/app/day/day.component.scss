@@ -1,5 +1,43 @@
 @import '../../appThemeVariables.scss';
 
+.mat-expansion-panel-header-title {
+  font-weight: bold;
+  font-size: large;
+}
+
+.mat-expansion-panel-header-description {
+  font-weight: bold;
+  color: $primary-light;
+}
+
+.mat-card-title {
+  font-size: small;
+  color: $primary-dark;
+}
+
+.items {
+  font-size: medium;
+}
+
+.mat-card-content > :first-child {
+  margin-top: 5px;
+}
+
+.card {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.meal-card {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.mat-list-item.mat-list-item-avatar.mat-list-item-with-avatar {
+  height: 36px;
+}
+
+/*
 .day-page {
     padding-top: 80px;
 }
@@ -77,3 +115,4 @@ div.sticky {
   position: sticky;
   top: 10px;
 }
+*/
