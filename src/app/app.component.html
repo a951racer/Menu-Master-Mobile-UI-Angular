@@ -1,20 +1,45 @@
-<mat-toolbar class="toolbar sticky-header">
-  <span>Ché Hobbs</span>
+<ng-container>
+  <mat-toolbar class="toolbar sticky-header">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>What's for Dinner</span>
+  </mat-toolbar>
 
-  <!-- This fills the remaining space of the current row -->
-  <span class="fill-remaining-space"></span>
+<mat-sidenav-container class="container" hasBackdrop="false" >
+      <mat-sidenav  #sidenav mode="over" [fixedInViewport]="true" [fixedTopGap]="65" [fixedBottomGap]="65">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+              <a routerLink="/today">
+                <mat-icon class="icon">today</mat-icon>
+                <span  class="label">&nbsp;Today</span>
+              </a>
+            </mat-toolbar-row>
+            <mat-toolbar-row>
+              <a routerLink="/five">
+                <mat-icon class="icon">calendar_today</mat-icon>
+                <span  class="label">&nbsp;5-Day</span>
+              </a>
+            </mat-toolbar-row>
+            <mat-toolbar-row>
+              <a routerLink="/all">
+                <mat-icon class="icon">list</mat-icon>
+                <span  class="label">&nbsp;All</span>
+              </a>
+            </mat-toolbar-row>
+          </mat-toolbar>
+       </mat-sidenav>
+      <mat-sidenav-content>
 
-  <span>
-      <a mat-button routerLink="/" routerLinkActive="selected mat-raised-button" [routerLinkActiveOptions]="{exact: true}">Home</a>
-  </span>
-</mat-toolbar>
-
-<router-outlet></router-outlet>
-
-<mat-toolbar class="toolbar sticky-footer">
-  <div class="footer">
-    <span class="footer-text">A HobbsSquad Joint</span>
-    <br>
-    <span class="footer-text">Copyright &copy; 2019, Jon M Hobbs</span>
-  </div>
-</mat-toolbar>
+      <router-outlet></router-outlet>
+<!--
+    --></mat-sidenav-content>
+</mat-sidenav-container>
+  <mat-toolbar class="toolbar sticky-footer">
+    <div class="footer">
+      <span class="footer-text">A HobbsSquad Joint</span>
+      <br>
+      <span class="footer-text">Copyright &copy; 2019, Jon M Hobbs</span>
+    </div>
+  </mat-toolbar>
+</ng-container>
