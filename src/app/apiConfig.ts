@@ -4,5 +4,5 @@ const apiUrl = environment.apiUrl;
 
 export const apiConfig = {
     apiUrl: apiUrl,
-    dayURL: apiUrl + '/menu',
+    menuURL: apiUrl + '/menu',
   };

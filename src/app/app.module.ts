@@ -6,17 +6,13 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from '../interceptors/auth-interceptor';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule} from "@angular/forms";
-
-//import { customHttpProvider } from '../assets/custom-http';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
+import { AppService } from './app.service';
 
 import { MaterialModule } from './helpers/material/material.module';
 import { HelpersModule } from './helpers/helpers.module';
-
-import { DayModule } from './day/day.module';
 
 @NgModule({
   declarations: [
@@ -25,18 +21,17 @@ import { DayModule } from './day/day.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     HelpersModule,
     MaterialModule,
     FlexLayoutModule,
-    DayModule,
     RouterModule.forRoot(AppRoutes),
   ],
   exports: [
 
   ],
   providers: [
+    AppService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   entryComponents: [
