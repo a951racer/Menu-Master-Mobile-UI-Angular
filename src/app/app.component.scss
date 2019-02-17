@@ -1,6 +1,12 @@
 @import '../appThemeVariables.scss';
 
-mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+mat-sidenav-container {
+  height: 100%;
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+
+mat-sidenav-content, mat-sidenav {
   height: 100%;
 }
 
@@ -82,4 +88,64 @@ a:active {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+.menu-page {
+  margin: 0px 8px 0px 8px;
+}
+
+.mat-expansion-panel {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mat-expansion-panel-expanded {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mat-accordion > .mat-expansion-panel-spacing:last-child {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mat-expansion-panel-header-title, .mat-card-title {
+  font-weight: bold;
+  font-size: large;
+}
+
+.mat-expansion-panel-header-description, .mat-card-subtitle {
+  font-weight: bold;
+  color: $primary-light;
+}
+/*
+.mat-card-title {
+  font-size: small;
+  color: $primary-dark;
+}
+*/
+.items {
+  font-size: medium;
+}
+
+.mat-card-content > :first-child {
+  margin-top: 5px;
+}
+
+.mat-card {
+    margin-top: 5px;
+    //cursor: pointer;
+}
+
+.meal-card {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.meal-card-title {
+  color: $primary-dark;
+}
+
+.mat-list-item.mat-list-item-avatar.mat-list-item-with-avatar {
+  height: 36px;
 }
