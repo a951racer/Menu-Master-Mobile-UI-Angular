@@ -39,8 +39,11 @@ export class AppComponent {
         this.menuOpen = false;
         break;
       case 'half':
-        this.menuList = this.masterList;
-        this.viewMode = 'multi';
+      this.menuList = []
+      this.menuList.push(this.masterList[0]);
+      this.menuList.push(this.masterList[1]);
+      this.menuList.push(this.masterList[2]);
+      this.viewMode = 'multi';
         this.menuOpen = false;
         break;
       case 'all':
